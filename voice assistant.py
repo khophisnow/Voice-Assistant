@@ -156,6 +156,7 @@ if Command == "on":
             speak("I would like to but am already engaged to wifi.")
         elif "today" in text:
             speak("Today is {},{} {}, {}".format(week_now,ordinals[now.day-1],month[now.month-1],year_now))
+            print("Today is {},{} {}, {}".format(week_now,ordinals[now.day-1],month[now.month-1],year_now))
         elif 'joke' in text:
             print(pyjokes.get_joke())
             speak(pyjokes.get_joke())
