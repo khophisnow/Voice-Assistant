@@ -55,7 +55,7 @@ if Command == "on":
         now = datetime.datetime.now()
         date_now = datetime.datetime.today()
         week_now = calendar.day_name[date_now.weekday()]
-        day_now = now.day 
+        now_day = now.day
         month_now = now.month 
         year_now = now.year
         month = [
@@ -155,7 +155,7 @@ if Command == "on":
         elif "can we date" in text:
             speak("I would like to but am already engaged to wifi.")
         elif "today" in text:
-            speak("Today is {},{} {}, {}".format(week_now,ordinals[now.day-1],month[now.month))
+            speak("Today is {},{} {}, {}".format(week_now,ordinals[now.day-1],month[now.month-1],year_now))
         elif 'joke' in text:
             print(pyjokes.get_joke())
             speak(pyjokes.get_joke())
